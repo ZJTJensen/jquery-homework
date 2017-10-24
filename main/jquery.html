@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My jQuery basic assignment</title>
+    <script type ="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type ="text/javascript">
+     $(document).ready(function(){
+         $('#redb').click(function(){
+            $("#red").addClass("red");
+         });
+    
+        
+        $('#slowb').click(function(){
+        $("#slow").slideToggle("slow",function(){
+
+        });
+    });
+        $('#appendb').click(function(){
+        $("#append").append("<p>This is the new paragraph doont worry be happy!</p>");
+         
+    });
+    $('#hideb').click(function(){
+        $(".hide").hide("p");
+         
+    });
+    $('#showb').click(function(){
+        $(".hide").show("p");
+         
+    });
+    $('#toggleb').click(function(){
+        $("#toggle").toggle("p");
+         
+    });
+
+    $('#slidedownb').click(function(){
+        $(".slidedown").slideDown("p");
+         
+    });
+    $('#slideupb').click(function(){
+        $(".slidedown").slideUp("p");
+         
+    });
+
+    $('#fadeinb').click(function(){
+        $(".fadein").fadeIn("p");
+         
+    });
+    $('#fadeoutb').click(function(){
+        $(".fadein").fadeOut("p");
+         
+    });
+    $('#beforeb').click(function(){
+        $("#before").before("<p>This is the new paragraph doont worry be happy!</p>");
+         
+    });
+    $('#afterb').click(function(){
+        $("#after").after("<p>This is the new paragraph doont worry be happy!</p>");
+         
+    });
+
+    $('#htmlb').click(function(){
+        $("#html").html("<p>This is the new paragraph doont worry be happy!</p>");
+         
+    });
+    $('#textb').click(function(){
+        $("#text").text("<p>This is the new paragraph doont worry be happy!</p>");
+         
+    });
+    $('#attrb').click(function(){
+        $("#attr").attr({width: "0px", height: "0px"});
+         
+    });
+    $( "#valb" ).click(function() {
+        var text = $( this ).text();
+        $( "input" ).val( text );
+      });
+    $('#datab').click(function(){
+        $("div").data("sup", {spam: "Look here is some spam data and spam"});
+        $("span:last").text($("div").data("sup").spam);
+         
+    });
+    
+
+
+});
+    </script>
+
+    <style>
+        .layer{
+            display:inline-block;
+            border-bottom: blue solid 5px;
+            height: 200px;
+            width: 400px;
+        }
+        .layer *{
+            display: inline-block;
+        }
+        h1{
+            margin:20px 0 0 30px;
+
+        }
+        button{
+            margin: 50px 0 0 0;
+        }
+
+        p{
+            margin: 0 0 0 100px;
+        }
+
+    .red{
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    <div class = "layer">
+            <button id="redb">Add Class</button>
+              <h1>AddClass</h1>
+            <p id = "red">Click the button to add class 'red' to this page</p>
+    </div>
+    <div class= "layer">    
+        <button id="slowb">Slidetoggle</button> 
+        <h1>Slide Toggle</h1>
+        <p>Click this button to slidetoggle a hidden image</p>
+        <img style="display:none; " id ="slow" src="slow.png" alt="slowpoke">
+    </div>
+    <div class = 'layer'>
+            <button id="appendb">Append</button>
+            <h1>Slide toggle</h1>
+        <p id = "append">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="hideb">hide</button>
+            <button id="showb">show</button>
+            <h1>hide and show</h1>
+        <p class = "hide">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="toggleb">toggle</button>
+            <h1>toggle</h1>
+        <p id = "toggle">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="slidedownb">slidedown</button>
+            <button id="slideupb">slideup</button>
+            <h1>slidedown</h1>
+        <p class = "slidedown">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="fadeinb">fadein</button>
+            <button id="fadeoutb">fadeout</button>
+            <h1>fadein</h1>
+        <p class = "fadein">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="beforeb">before</button>
+            <h1>before</h1>
+        <p id = "before">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="afterb">after</button>
+            <h1>after</h1>
+        <p id = "after">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="htmlb">html</button>
+            <h1>html</h1>
+        <p id = "html">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="attrb">attr</button>
+            <h1>attr</h1>
+        <p >Click the button to appened a new paragraph</p>
+        <img width="200" height="200" id ="attr" src="slow.png" alt="slowpoke">
+    </div>
+    <div class = 'layer'>
+            <button id="valb">val</button>
+        <input type="text" value="click a button">
+    </div>
+    <div class = 'layer'>
+            <button id="textb">text</button>
+            <h1>text</h1>
+        <p id = "text">Click the button to appened a new paragraph</p>
+    </div>
+    <div class = 'layer'>
+            <button id="datab">data</button>
+            <h1>data</h1>
+       <p> <span></span></p>
+       <p> <span></span></p>
+    </div> 
+
+
+ <!--.click
+.hide
+.show
+.toggle
+.slideDown
+.slideUp
+.slideToggle
+.fadeIn
+.fadeOut
+.addClass
+.before
+.after
+.append
+.html
+.attr
+.val
+.text
+.data -->
+
+</body>
+    
+</body>
+</html>
+

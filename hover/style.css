@@ -1,0 +1,33 @@
+
+#wrapper{
+    width: 1000px;
+    height: auto;
+    margin: 0px auto;
+}
+
+h3{
+    margin: 0 0 0 10px;
+}
+
+.ninjabox{
+    display: inline-block;
+    width:235px;
+    height:235px;
+    border: 1px solid black;
+    margin: 10px 0 0 10px;
+}
+
+img{
+    width:235px;
+    height:235px;
+}
+/* .ninja{
+    position: absolute;
+    /* display: inline-block; */
+    background-color: white;
+    
+}
+.ninjaa{
+    display: inline-block;
+ 
+} */
